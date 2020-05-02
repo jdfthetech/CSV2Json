@@ -3,16 +3,17 @@
 
 import pandas as pd
 import numpy as np
-#only neededif you want to use xslx or xls files, also will need to add sheet name
 from openpyxl import load_workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 import json
 
+name = input("give me the name of the file: ")
+
 def main():
 
 
-	df = pd.read_csv('filename.csv')
-	data = df.to_json('filename.json')
+	df = pd.read_csv(name + '.csv')
+	data = df.to_json(name + '.json')
 	
 
 if __name__ == '__main__':
